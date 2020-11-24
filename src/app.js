@@ -5,7 +5,7 @@ const geocode=require('../utils/geocode');
 const forecast=require('../utils/forecast');
 
 const app=express();
-const port=3000;
+const port = process.env.PORT || 3000;
 
 const pages_path= path.join(__dirname,"../template/pages");
 const layout_path= path.join(__dirname,"../template/layouts");
@@ -85,5 +85,5 @@ app.get('*',(req, res) => {
 
 
 app.listen(port,()=>{
-    console.log("http://localhost:"+port+" is started");
+    console.log("Server is up on port "+port);
 });
