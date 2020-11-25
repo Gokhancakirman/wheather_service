@@ -10,7 +10,7 @@ const forecast=(lat,long,callback)=>{
             }
             else
             {
-                const result=response.data.current.weather_descriptions[0]+" It is currenly "+response.data.current.temperature+" degrees out.It feels like "+response.data.current.feelslike+" degress out";
+                const result=response.data.current.weather_descriptions[0]+" It is currenly "+response.data.current.temperature+" degrees out.It feels like "+response.data.current.feelslike+" degress out. Humidity is "+response.data.current.humidity+"%";
                 callback(undefined,result);
             }
         })
